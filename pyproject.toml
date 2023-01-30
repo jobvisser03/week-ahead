@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "week-ahead"
+version = "0.1.0"
+description = ""
+authors = ["Job Visser <job.visser@leaseplan.com>"]
+readme = "README.md"
+packages = [{include = "week_ahead", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+arrow = "^1.2.3"
+click = "^8.1.3"
+load-dotenv = "^0.1.0"
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.19.2"
+black = "^22.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+week = "week_ahead.week_ahead:update_week_ahead"
